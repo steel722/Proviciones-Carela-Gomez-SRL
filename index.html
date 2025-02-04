@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provisiones Carela Gómez SRL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Imagenes/Logo.png" alt="Provisiones Carela Gómez SRL" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+                <li><a href="#productos" onclick="mostrarSeccion('productos')">Productos</a></li>
+                <li><a href="#ofertas" onclick="mostrarSeccion('ofertas')">Ofertas</a></li>
+                <li><a href="#contacto" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+                <li><a href="#nosotros" onclick="mostrarSeccion('nosotros')">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="inicio">
+        <div class="buttons-container">
+            <a href="https://www.instagram.com/provisionescarela?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="button" target="_blank">
+                <img src="Imagenes/instagram-logo.png" alt="Instagram">
+                Siguenos En Instagram
+            </a>
+            <a href="https://web.facebook.com/profile.php?id=100084503247894" class="button" target="_blank">
+                <img src="Imagenes/facebook-logo.png" alt="Facebook">
+                Siguenos En Facebook
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=18093209411" class="button" target="_blank">
+                <img src="Imagenes/whatsapp-logo.png" alt="WhatsApp">
+                Chatea Con Nosotros...
+            </a>
+        </a>
+        <a href="https://maps.app.goo.gl/8FJTgNFmT1UHJ6xc8" class="button" target="_blank">
+            <img src="Imagenes/Ubicacion-logo.png" alt="Ubicacion">
+            Ven Encuentranos Aquí
+        </a>
+        <a href="catalogo.html" class="button" target="_blank">
+            <img src="Imagenes/catalogo.png" alt="Catalogo">
+            Mira Nuestro Catálogo
+        </a>
+        </div>
+    </div>
+
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <ul>
+            <li>Arroz de alta calidad</li>
+            <li>Aceite comestible 100% puro</li>
+            <li>Fideos de la mejor marca</li>
+            <li>Conservas y productos enlatados</li>
+            <li>Frutas frescas y verduras orgánicas</li>
+        </ul>
+    </section>
+
+    <section id="ofertas">
+        <h2>Ofertas Especiales</h2>
+        <ul>
+            <li>2x1 en Arroz y Aceite</li>
+            <li>Descuento del 15% en Conservas</li>
+            <li>Fideos al 30% de descuento por compras grandes</li>
+        </ul>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: provisionescarela@gmail.com</p>
+        <p>Teléfono: 1 (809) 320 9211</p>
+        <p>Dirección: Av.Manolo Tavarez Justo, Urb. Atlántica, frente a los depósitos ferreteros.</p>
+    </section>
+
+    <section id="nosotros">
+        <h2>¿Quienes Somos?</h2>
+            <h4>Somos una empresa familiar, orientada a la distribución de productos al por mayor y  detalle, con una variedad de más de 2,500 productos a la disposición de nuestros clientes.
+
+                Nuestra empresa está comprometida con la calidad y el buen servicio, en la menor cantidad de tiempo posible, con un enfoque de mejora continua.
+                En Provisiones Carela, somos más que un supermercado. somos tu aliado de confianza para el día a día. Nos enorgullecemos de ofrecer productos frescos, variedad y precios competitivos, siempre con el trato cercano y familiar que nos caracteriza.
+
+                Nos esforzamos por brindarte una experiencia de compra cómoda y satisfactoria, asegurándonos de que encuentres todo lo que necesitas en un solo lugar. Desde alimentos básicos hasta productos especializados, nuestro compromiso es garantizar calidad, buen servicio y la mejor selección para tu hogar.
+                
+                Provisiones Carela: donde la calidad y el buen servicio van de la mano. ¡Visítanos y descubre la diferencia!<h4>
+    </section>
+
+    <video autoplay muted loop playsinline preload="auto" id="background-video">
+        <source src="Videos/background.mp4" type="video/mp4">
+    </video>
+
+    <footer>
+        <p>&copy; 2025 Provisiones Carela Gómez SRL - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function mostrarSeccion(seccion) {
+            const secciones = document.querySelectorAll("section");
+            secciones.forEach((sec) => sec.style.display = "none");
+
+            if (seccion === 'inicio') {
+                document.getElementById('inicio').style.display = 'block';
+            } else {
+                document.getElementById('inicio').style.display = 'none';
+                document.getElementById(seccion).style.display = 'block';
+            }
+        }
+
+        // Mostrar "Inicio" al cargar la página
+        window.onload = () => mostrarSeccion('inicio');
+    </script>
+</body>
+</html>
